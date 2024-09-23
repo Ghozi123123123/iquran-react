@@ -1,0 +1,171 @@
+/* Navbar.css */
+.navbar {
+    top: 0; /* Navbar akan tetap berada di atas */
+    z-index: 10000; /* Pastikan navbar berada di atas elemen lain */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2125;
+    color: white; 
+    width: 97%;
+    height: 80px;
+    position: fixed; /* Untuk positioning hamburger */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Garis halus di bawah navbar */
+}
+.search-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    width: 100%; /* Adjust as needed */
+  }
+  
+  .search-input {
+    background-color: transparent;
+    width: 100%; /* Full width */
+    padding: 10px 40px 10px 10px; /* Add right padding for icon space */
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    font-size: 12px; /* Icon size */
+    color: #ccc;
+    cursor: pointer; /* Show pointer on hover */
+  }
+  
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 35px; /* Ukuran logo */
+    height: auto;
+    margin-right: 10px; /* Spasi antara logo dan teks */
+}
+
+/* Link navbar */
+.navbar-links {
+    display: flex; /* Tampilkan link secara default */
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0 20px; /* Jarak horizontal antar link */
+    position: relative; /* Untuk positioning garis bawah */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Efek transisi warna dan transform */
+    padding-bottom: 5px; /* Padding bawah untuk memberikan ruang bagi garis */
+}
+
+.navbar-links a:hover {
+    color: #919094; /* Ubah warna saat hover */
+}
+
+.navbar-links li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Warna garis di bawah */
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.navbar-links li:hover::after {
+    width: 100%; /* Garis melebar penuh saat hover */
+}
+
+/* Input pencarian */
+.search-input {
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    transition: border 0.3s ease; /* Efek transisi border */
+}
+
+.search-input:focus {
+    border: 2px solid #adadad; /* Ubah border saat fokus */
+}
+
+/* Tombol hamburger */
+.hamburger {
+    display: none; /* Sembunyikan tombol hamburger di desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: transform 0.3s ease; /* Efek transisi animasi */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        display: none; /* Sembunyikan link saat mobile */
+        width: 100%; /* Lebar penuh untuk dropdown */
+        flex-direction: column;
+        background-color: #1f2125; /* Warna background untuk menu dropdown */
+        position: absolute;
+        top: 70px; /* Posisi tepat di bawah navbar */
+        left: 0;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Tampilkan link saat hamburger di-click */
+    }
+
+    .navbar-links li {
+        margin: 10px 0; /* Jarak antar link di mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Tampilkan hamburger di mobile */
+    }
+
+    .hamburger.active .line:nth-child(1) {
+        transform: rotate(45deg) translateY(6px); /* Animasi hamburger berubah jadi silang */
+    }
+
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0; /* Hilangkan garis tengah */
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px); /* Animasi hamburger berubah jadi silang */
+    }
+}
+
+
+.bismillah {
+    font-size: 36px;
+    color: #ffffff;
+    margin: 40px 0px;
+    text-align: center;
+    font-family: 'Amiri', serif; /* Font Arabic yang lebih estetik */
+    padding-bottom: 100px;
+}   

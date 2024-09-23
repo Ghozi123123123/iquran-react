@@ -1,0 +1,223 @@
+/* Style utama untuk container Quran */
+#root {
+  background-color: #1f2125; 
+  padding: 20px; /* Padding di semua sisi */
+}
+/* Dropdown Styling */
+.juz-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1f2125;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 200px; /* Batasi tinggi maksimum dropdown */
+  overflow-y: auto; /* Aktifkan scroll vertikal */
+}
+
+
+.juz-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-content li:hover {
+  background-color: #2e3136;
+}
+
+.quran-container {
+  text-align: left;
+  width: 1300px; 
+  padding: 100px 20px 20px; /* Tambahkan padding atas lebih besar untuk memberi ruang ke navbar */
+  margin-bottom: 100px;
+  background-color: #1f2125;
+}
+
+/* Style untuk grid surat */
+.surah-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 10px; 
+  margin: 20px 0; /* Jarak di atas dan bawah */
+}
+
+/* Style untuk grid surat */
+.surah-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  grid-gap: 10px; /* Jarak antar kotak */
+}
+
+.surah-item {
+  display: flex;
+  justify-content: space-between; /* Menyusun item di antara kiri dan kanan */
+  align-items: center; /* Menyusun item secara vertikal di tengah */
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  height: 50px; /* Sesuaikan tinggi */
+  border: 1px solid rgba(255, 255, 255, 0.288); /* Garis tepi lembut */
+}
+
+.surah-item:hover {
+  background-color: #2b2d30; /* Warna latar belakang saat hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+  transform: scale(1.02); /* Memperbesar kotak surat saa t hover */
+}
+
+/* Efek transisi untuk teks dalam kotak */
+.surah-info h2,
+.surah-info .translation,
+.surah-arabic .arabic-text,
+.ayah-count {
+  transition: color 0.3s ease;
+}
+
+.surah-item:hover .surah-info h2,
+.surah-item:hover .surah-info .translation,
+.surah-item:hover .surah-arabic .arabic-text,
+.surah-item:hover .ayah-count {
+  color: #01ffc0; /* Ubah warna teks saat hover */
+}
+
+
+.surah-info h2 {
+  font-size: 12px; /* Kecilkan ukuran font */
+  margin-top: 5px; /* Tambahkan margin atas untuk menggeser ke bawah */
+}
+
+.surah-info .translation {
+  font-size: 12px;
+  margin: 0; /* Pastikan tidak ada margin pada elemen arti surat */
+}
+
+.surah-arabic {
+  text-align: right; /* Teks di sebelah kanan */
+  flex: 1; /* Memungkinkan untuk mengambil ruang yang tersedia */
+}
+
+/* Ukuran font untuk teks Arab dan terjemahan */
+.surah-arabic .arabic-text {
+  font-family: 'Amiri', serif; /* Ganti dengan nama font yang digunakan */
+  font-size: 8px; /* Sesuaikan ukuran font */
+  color: #e7e9ea;
+  text-align: right; /* Menyelaraskan teks ke tengah */
+}
+
+
+.ayah-count {
+  font-size: 12px; /* Ukuran font untuk jumlah ayat dikecil */
+  color: #e7e9ea;
+}
+
+.revelation-place {
+  display: none; /* Menghapus teks "Turun di kota" */
+}
+
+/* Style tombol kembali */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Ukuran padding lebih kecil */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 14px; /* Ukuran font tombol */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.ayahs-container {
+  font-family: 'Amiri', serif; 
+  margin-top: 5px;
+}
+
+.ayahs-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ayahs-container li {
+  text-align: right;
+  background: transparent;
+  margin: 50px 0;
+  padding: 30px; /* Ukuran padding lebih kecil */
+  border-radius: 5px; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Garis halus di bagian bawah */
+}
+
+.arabic-number {
+  padding-right: 64px;
+  padding-left: 12px;
+  font-family: 'Amiri', serif; /* Ganti dengan font yang sesuai */
+  font-size: 16px; /* Ukuran font untuk angka */
+  color: #ffffff; /* Warna yang sesuai */
+  display: inline-block; /* Memastikan angka dan teks sejajar */
+}
+.indonesian-translation {
+  font-size: 14px; /* Ukuran font untuk terjemahan */
+  color: #e7e9ea; /* Warna untuk terjemahan */
+  margin-top: 50px; /* Tambahkan jarak atas antara ayat dan terjemahan */
+  text-align: right; /* Menyelaraskan teks ke kanan */
+}
+
+.back-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex; /* Untuk menempatkan ikon dan teks dalam satu baris */
+  align-items: center; /* Menyelaraskan ikon dengan teks */
+  position: relative; /* Tambahkan ini untuk memungkinkan penggunaan position absolute jika diperlukan */
+  top: 60px; /* Geser ke atas */
+  left: 5px;
+}
+
+
+.back-button i {
+  margin-right: 5px; /* Jarak antara ikon dan teks */
+}
+
+.back-button:hover {
+  background-color: #3c3f42;
+}
+.surah-title {
+  text-align: center;
+  font-size: 24px; /* Sesuaikan ukuran font sesuai kebutuhan */
+  color: #ffffff; /* Sesuaikan warna teks */
+  font-family: 'Amiri', serif; /* Gunakan font arab yang bagus seperti Amiri jika tersedia */
+  font-weight: bold; /* Membuat teks tebal */
+  margin-top: 60px; /* Tambahkan margin atas untuk memberikan jarak lebih dari navbar */
+}
+.loading-icon {
+  font-size: 50px; /* Ukuran ikon */
+  color: #ffbb00; /* Warna ikon */
+  animation: spin 1s linear infinite; /* Animasi berputar */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
